@@ -15,9 +15,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:3000/api/auth/login", form, {
-        withCredentials: true,
-      });
+      await axios.post(
+        "https://panchi-ai-chatsystem-project.onrender.com/api/auth/login",
+        form,
+        {
+          withCredentials: true,
+        }
+      );
 
       setToast({ type: "success", message: "Login successful ✅" });
 
@@ -94,10 +98,7 @@ const Login = () => {
 
           <p className="text-center text-sm text-neutral-400">
             Don’t have an account?{" "}
-            <Link
-              to="/register"
-              className="text-green-400 hover:underline"
-            >
+            <Link to="/register" className="text-green-400 hover:underline">
               Sign Up
             </Link>
           </p>

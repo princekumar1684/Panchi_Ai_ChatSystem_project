@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import ChatWindow from "../components/ChatWindow";
 
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://panchi-ai-chatsystem-project.onrender.com";
 
 const ChatHome = () => {
   const [chats, setChats] = useState([]);

@@ -30,9 +30,13 @@ const Register = () => {
         },
       };
 
-      await axios.post("http://localhost:3000/api/auth/register", payload, {
-        withCredentials: true,
-      });
+      await axios.post(
+        "https://panchi-ai-chatsystem-project.onrender.com/api/auth/register",
+        payload,
+        {
+          withCredentials: true,
+        }
+      );
 
       setToast({ type: "success", message: "Registered successfully 🎉" });
 
