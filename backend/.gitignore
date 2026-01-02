@@ -1,0 +1,72 @@
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Dependencies
+# =========================
+node_modules/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# =========================
+# Build / Compiled files
+# =========================
+dist/
+build/
+
+# =========================
+# Coverage / Testing
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# Runtime files
+# =========================
+pids/
+*.pid
+*.pid.lock
+*.seed
+
+# =========================
+# Database / Local data
+# =========================
+data/
+*.db
+*.sqlite
+
+# =========================
+# Secrets / Keys
+# =========================
+*.pem
+*.key
+serviceAccountKey.json
+
+# =========================
+# Cache
+# =========================
+.cache/
+.eslintcache
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
