@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import ChatWindow from "../components/ChatWindow";
 
-const API_BASE_URL = "https://panchi-ai-chatsystem-project.onrender.com";
+// const API_BASE_URL = "https://panchi-ai-chatsystem-project.onrender.com";
+const API_BASE_URL = "http://localhost:3000";
 
 const ChatHome = () => {
   const [chats, setChats] = useState([]);
@@ -62,7 +63,7 @@ const ChatHome = () => {
       const res = await axios.post(
         `${API_BASE_URL}/api/chat`,
         { title: title.trim() },
-        { withCredentials: true }
+        { withCredentials: true },
       );
 
       const newChat = res.data.chat;
@@ -85,13 +86,13 @@ const ChatHome = () => {
       const res = await axios.patch(
         `${API_BASE_URL}/api/chat/${chat._id}`,
         { title: newTitle.trim() },
-        { withCredentials: true }
+        { withCredentials: true },
       );
 
       const updatedChat = res.data.chat;
 
       setChats((prev) =>
-        prev.map((c) => (c._id === updatedChat._id ? updatedChat : c))
+        prev.map((c) => (c._id === updatedChat._id ? updatedChat : c)),
       );
 
       if (activeChat?._id === updatedChat._id) {
@@ -104,7 +105,7 @@ const ChatHome = () => {
 
   const deleteChat = async (chat) => {
     const confirmed = window.confirm(
-      `Delete chat "${chat.title}"? This cannot be undone.`
+      `Delete chat "${chat.title}"? This cannot be undone.`,
     );
 
     if (!confirmed) return;
@@ -129,7 +130,7 @@ const ChatHome = () => {
       await axios.post(
         `${API_BASE_URL}/api/auth/logout`,
         {},
-        { withCredentials: true }
+        { withCredentials: true },
       );
     } catch (error) {
       console.error("Failed to logout", error);

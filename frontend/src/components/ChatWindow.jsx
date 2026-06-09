@@ -2,7 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Message from "./Message";
 
-const API_BASE_URL = "https://panchi-ai-chatsystem-project.onrender.com";
+// const API_BASE_URL = "https://panchi-ai-chatsystem-project.onrender.com";
+const API_BASE_URL = "http://localhost:3000";
 
 const ChatWindow = ({ activeChat }) => {
   const [messages, setMessages] = useState([]);
